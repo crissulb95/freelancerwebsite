@@ -24,7 +24,24 @@ body{
 }
 
 h1,h2,h3{
-    margin: 0;
+    margin: 0;    
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+h1{
+    font-weight: bolder;
+    font-size: 4rem;
+}
+h2{
+    font-weight: bolder;
+    font-size: 3rem;
+}
+
+h3{
+    color: var(--secundario);
+    font-weight: 700;
+    font-size: 2rem;
 }
 
 .site-header{
@@ -67,7 +84,7 @@ h1,h2,h3{
 }
 
 .hero{
-    height: 60vh;
+    height: calc(100vh - 6.5rem);
     background: url("../img/hero.jpg");
     position: relative;
     display: flex;
@@ -100,6 +117,7 @@ h1,h2,h3{
 .boton{
     background: var(--secundario);
     padding: 1rem 5rem;
+    border: none;
     display:inline-block;
     margin: 3rem 0 0 0;
     text-transform: uppercase;
@@ -108,4 +126,161 @@ h1,h2,h3{
     font-weight: bolder;
     font-size: 2rem;
     border-radius: 0.7rem;
+}
+
+.boton:hover{
+    cursor: pointer;
+    
+}
+
+.contenedor{
+    max-width: 100rem;
+    margin: 5rem 2rem;
+    background: #fff;
+    padding: 3rem;
+    border-radius: 1rem;
+    -webkit-box-shadow: 4px 5px 12px -5px rgba(0,0,0,0.31);
+    -moz-box-shadow: 4px 5px 12px -5px rgba(0,0,0,0.31);
+    box-shadow: 4px 5px 12px -5px rgba(0,0,0,0.31);
+}
+
+@media (min-width: 768px) {
+    .contenedor{
+        margin: 5rem auto;
+    }
+}
+.servicio{
+    border-bottom: 0.5px solid var(--oscuro);
+    margin-bottom: 3rem;
+}
+
+.servicio h2{
+    text-align: center;
+    padding: 3rem 0;
+}
+
+@media (min-width: 768px) {
+    .servicio h2{
+        padding-bottom: 0;
+    }
+
+    .servicios h3{
+        margin-top: 0;
+    }
+}
+.servicios{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicios h3{
+    margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+    .contenedor-servicios{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .servicios{
+        flex: 0 0 calc(33.3% - 3rem);
+        margin: 5rem auto;
+    }
+}
+
+.iconos{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background: var(--primario);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 3rem;
+    margin: 2rem auto;
+}
+
+.servicios p{
+    font-size: 1.8rem ;
+    line-height: 1.5;
+}
+
+.contacto{
+    padding: 3rem 0;
+}
+
+.contacto h2{
+    text-align: center;
+    padding-bottom: 2rem;
+}
+form{
+    background: #dddddd;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+}
+
+form legend{
+    font-size: 2rem;
+    color: var(--oscuro);
+    font-weight: 700;
+    margin: 2rem auto;
+}
+
+@media (min-width: 768px) {
+    form{
+        max-width: 80rem;
+        margin: 0 auto;
+    }
+
+    .contenedor-campos{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .campo{
+        flex: 0 0 calc(50% - 2rem);
+    }
+}
+
+.campo{
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.campo label{
+    flex: 0 0 10rem;
+    padding-top: 1rem;
+}
+
+.campo input{
+    flex: 1;
+    height: 4rem;
+    border-radius: 0.5rem;
+    border: none;
+    padding: 1rem;
+}
+
+.campo textarea{
+    height: 6rem;
+    flex: 1;
+    border-radius: 0.5rem;
+    border: none;
+    padding: 1rem;
+}
+
+.w-100{
+    flex: 0 0 100%;
+}
+
+.enviar{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.enviar input{
+    margin-top: 1rem;
 }
